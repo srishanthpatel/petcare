@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Care Page</title>
+  <style>
+    /* ... (previous styles) */
+    form.login-form {
+      max-width: 300px;
+      margin: 20px auto;
+    }
+
+    form.login-form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    form.login-form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+    }
+    #login{
+      text-align: center;
+    }
+
+    #login1{
+      text-align: left;
+    }
+
+    form.login-form button {
+      background-color: #555;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ... (previous HTML) -->
+
+  <section id="login">
+    <h2>Login</h2>
+    <article>
+      <form class="login-form" onsubmit="return loginUser()">
+      <section id="login1">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="location.href='pet care index.html'"> Login</button>
+    
+      </form>
+    </form>
+    </article>
+  </section>
+</section>
+
+  <!-- ... (previous HTML) -->
+
+  <script>
+    function loginUser() {
+      const username = document.getElementById("user").value;
+      const password = document.getElementById("pass").value;
+
+      // In a real-world scenario, you would send the login information to a server for validation.
+      // For simplicity, we're using a basic client-side check in this example.
+      if (username === "admin" && password === "password") {
+        alert("Login successful!");
+        // You can redirect to another page or perform other actions after successful login.
+        return false; // Prevent form submission for this example.
+      } else {
+        alert("Invalid username or password. Please try again.");
+        return false; // Prevent form submission for this example.
+      }
+    }
+  </script>
+
+</body>
+</html>
